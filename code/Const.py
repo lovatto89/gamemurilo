@@ -3,6 +3,7 @@ from typing import Literal
 
 COLOR_BLUE = (22, 0, 221)
 COLOR_WHITE = (255, 255, 255)
+COLOR_YELLOW = (255, 255, 0)
 
 
 #M
