@@ -8,18 +8,20 @@ from code.Player import Player
 
 class EntityFactory:
 
-
-
-
-
     @staticmethod
-    def get_entity(entity_name: str, position=(0,0)):
+    def get_entity(entity_name: str, position=(0, 0)):
         match entity_name:
             case 'Level1Bg':
                 list_bg = []
-                for i in range (7):
-                    list_bg.append(Background(name=f'Level1Bg{i}', position=(0,0)))
+                for i in range(7):  # NUMERO DE IMAGENS DO LEVEL
+                    list_bg.append(Background(name=f'Level1Bg{i}', position=(0, 0)))
                     list_bg.append(Background(name=f'Level1Bg{i}', position=(WIN_WIDTH, 0)))
+                return list_bg
+            case 'Level2Bg':
+                list_bg = []
+                for i in range(5):
+                    list_bg.append(Background(name=f'Level2Bg{i}', position=(0, 0)))
+                    list_bg.append(Background(name=f'Level2Bg{i}', position=(WIN_WIDTH, 0)))
                 return list_bg
             case 'Player1':
                 return Player(name='Player1', position=(10, WIN_HEIGHT / 2 - 30))
